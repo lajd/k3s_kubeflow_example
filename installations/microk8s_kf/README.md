@@ -6,11 +6,18 @@
 - Nvidia GPU(s)
 - CUDA drivers (tested on 11.4)
 
+# Limitations
+- No GPU support
+  - Microk8s version 1.21 has an issue identifying GPUs
+  - See https://github.com/canonical/microk8s/issues/2634
+
+
 # Install MicroK8s
 See https://microk8s.io/docs/getting-started
 
 ```commandline
 sudo snap remove microk8s --purge
+# Note: We install 1.21 since this is the last version of Kubernetes for which Kubeflow is supported
 sudo snap install microk8s --classic --channel=1.21/stable
 ```
 
