@@ -12,7 +12,9 @@ conda create -n local_kubeflow python=3.9
 conda activate local_kubeflow
 ```
 
-Install PyPi dependencies:
+Install package and PyPi dependencies:
 ```commandline
-pip install -r requirements.txt
+pip install -e .
 ```
+
+

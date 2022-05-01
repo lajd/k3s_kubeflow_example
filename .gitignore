@@ -1,3 +1,11 @@
 .idea
 installations/minikube_kf
-examples
+*.gz
+
+.mypy_cache
+.pytest_cache
+*/*.pyc
+*/*.pyd
+*/**/__pycache__
+*.egg-info
+__pycache__/

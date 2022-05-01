@@ -244,7 +244,7 @@ such that it is aware of the GPUs present on the host.
 
 Copy CUDA config file to containderd directory. See https://k3d.io/v4.4.8/usage/guides/cuda/ for details.
 ```commandline
-sudo cp configs/config.toml.tmpl /var/lib/rancher/k3s/agent/etc/containerd/config.toml.tmpl
+sudo cp installations/configs/config.toml.tmpl /var/lib/rancher/k3s/agent/etc/containerd/config.toml.tmpl
 ```
 
 Restart k3s after the changes:
@@ -294,7 +294,7 @@ Capacity:
 ## Apply a test pod that requires GPU access
 
 ```commandline
-kubectl apply -f configs/nvidia-smi-test-pod.yaml
+kubectl apply -f installations/configs/nvidia-smi-test-pod.yaml
 ```
 
 Verify that the container can be brought up:

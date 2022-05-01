@@ -130,3 +130,10 @@ K8s version:
 Client Version: version.Info{Major:"1", Minor:"21+", GitVersion:"v1.21.11-3+2bdf0a81ac1652", GitCommit:"2bdf0a81ac16527b69a7840edf58307f72c82df2", GitTreeState:"clean", BuildDate:"2022-03-18T13:13:14Z", GoVersion:"go1.16.15", Compiler:"gc", Platform:"linux/amd64"}
 Server Version: version.Info{Major:"1", Minor:"21+", GitVersion:"v1.21.11-3+2bdf0a81ac1652", GitCommit:"2bdf0a81ac16527b69a7840edf58307f72c82df2", GitTreeState:"clean", BuildDate:"2022-03-18T13:10:46Z", GoVersion:"go1.16.15", Compiler:"gc", Platform:"linux/amd64"}
 
+# Optional next steps
+
+## Enable the Microk8s registry
+
+```commandline
+microk8s enable registry
+```
