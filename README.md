@@ -17,4 +17,5 @@ Install package and PyPi dependencies:
 pip install -e .
 ```
 
-
+## Simple-pipeline
+Try an example pipeline in `examples/simple_pipeline/README.md`

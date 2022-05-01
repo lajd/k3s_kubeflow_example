@@ -17,9 +17,11 @@ and note that the `simple_pipeline.py.tar.gz` is created
 
 2. Run the steps in `run_pipeline.py`
 
-```python run_pipeline.py```
+```commandline
+python run_pipeline.py
+```
 
-Navigate to the UI and ovbserve the newly created pipeline run:
+Navigate to the UI and observe the newly created pipeline run:
 
 http://10.64.140.43.nip.io/_/pipeline/?ns=admin#/runs
 
