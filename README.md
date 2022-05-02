@@ -17,5 +17,8 @@ Install package and PyPi dependencies:
 pip install -e .
 ```
 
-## Simple-pipeline
+## Simple pipeline
 Try an example pipeline in `examples/simple_pipeline/README.md`
+
+## Pytorch Lightning pipeline
+Try an example pipeline in `examples/pytorch_lightning_cifar10/README.md`
