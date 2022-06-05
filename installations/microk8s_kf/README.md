@@ -49,6 +49,7 @@ mkdir -p ~/.kube
 microk8s config > ~/.kube/microk8s_config.yaml 
 export KUBECONFIG=~/.kube/microk8s_config.yaml
 # Consider also updating in ~/.bashrc
+echo 'KUBECONFIG=~/.kube/microk8s_config.yaml' >> ~/.bashrc
 ```
 
 # Install KubeFlow
@@ -136,4 +137,10 @@ Server Version: version.Info{Major:"1", Minor:"21+", GitVersion:"v1.21.11-3+2bdf
 
 ```commandline
 microk8s enable registry
+```
+
+## Access the Kubernetes dashboard
+
+```commandline
+microk8s dashboard-proxy
 ```
