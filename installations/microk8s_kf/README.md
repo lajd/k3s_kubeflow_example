@@ -21,6 +21,13 @@ sudo snap remove microk8s --purge
 sudo snap install microk8s --classic --channel=1.21/stable
 ```
 
+# Install JuJu
+
+```commandline
+sudo snap install juju --classic
+```
+
+
 ## Join the user group
 
 ```commandline
@@ -71,7 +78,7 @@ microk8s enable dns storage ingress metallb:10.64.140.43-10.64.140.49
 
 Note that installation of `storage` can take a while.
 
-## Remove any existing juj cache
+## Remove any existing juju cache
 
 Helpful for clearing things like ca-certs that have been previously generated.
 ```commandline
@@ -92,6 +99,15 @@ juju add-model kubeflow
 ```
 
 ## Install KubeFlow
+
+
+To deploy "full" kubeflow, run:
+
+```commandline
+juju deploy kubeflow --trust
+```
+
+Or, to install only the core services, run:
 ```commandline
 juju deploy kubeflow-lite --trust
 ```
@@ -105,14 +121,11 @@ watch -c juju status --color
 
 ## Configure
 
-
-
 Configure the juju dex-auth and oidc-gatekeeper:
 ```commandline
 juju config dex-auth public-url=http://10.64.140.43.nip.io
 juju config oidc-gatekeeper public-url=http://10.64.140.43.nip.io
 ```
-
 
 Set development dex-auth:
 ```commandline
@@ -121,11 +134,11 @@ juju config dex-auth static-password=admin
 ```
 
 ## Access the KubeFlow dashboard
-Visit http://10.64.140.43.nip.io to access the dashboard
+Visit http://10.64.140.43.nip.io to access the dashboard using the credentials above (e.g. admin, admin).
 
 ## Version information
 JuJu version:
-2.9.28-ubuntu-amd64
+2.9.31-ubuntu-amd64
 
 K8s version:
 Client Version: version.Info{Major:"1", Minor:"21+", GitVersion:"v1.21.11-3+2bdf0a81ac1652", GitCommit:"2bdf0a81ac16527b69a7840edf58307f72c82df2", GitTreeState:"clean", BuildDate:"2022-03-18T13:13:14Z", GoVersion:"go1.16.15", Compiler:"gc", Platform:"linux/amd64"}
